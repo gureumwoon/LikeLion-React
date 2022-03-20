@@ -23,7 +23,7 @@ function MovieModal({
                         src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
                         alt="modal__poster-img"
                     />
-                    <div className="modal__conent">
+                    <div className="modal__content">
                         <p className="modal__details">
                             <span className="modal__user_perc">
                                 100% for you
