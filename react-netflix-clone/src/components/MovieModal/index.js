@@ -1,5 +1,6 @@
-import React from 'react'
+import { useRef } from "react";
 import "./MovieModal.css";
+import { useCloseModal } from "../../hooks/useCloseModal";
 
 function MovieModal({
     backdrop_path,
@@ -11,10 +12,13 @@ function MovieModal({
     vote_average,
     setModalOpen,
 }) {
+
+    const outSection = useRef();
+
     return (
         <div className="presentation">
             <div className="wrapper-modal">
-                <div className="modal">
+                <div className="modal" ref={outSection} onClick={useCloseModal(outSection, setModalOpen)}>
                     <span onClick={() => setModalOpen(false)} className="modal-close">
                         X
                     </span>
@@ -36,7 +40,7 @@ function MovieModal({
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
