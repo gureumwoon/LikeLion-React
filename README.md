@@ -96,7 +96,6 @@ Basic
   <div align="center">
         <img
          src="https://user-images.githubusercontent.com/83581867/159506113-59f8769a-e96d-48b3-975e-e67f9dc15827.gif"
-         width="500px;"
          alt=""
        />
   </div>
@@ -107,8 +106,7 @@ challenge
   
   <div align="center">
         <img
-         src="https://user-images.githubusercontent.com/83581867/159506113-59f8769a-e96d-48b3-975e-e67f9dc15827.gif"
-         width="500px;"
+         src="https://images.velog.io/images/codns1223/post/969d0822-944e-4a34-b78d-3249b516bb3b/swiper1.gif"
          alt=""
        />
   </div>
