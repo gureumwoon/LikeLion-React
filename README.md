@@ -106,7 +106,7 @@ challenge
   
   <div align="center">
         <img
-         src="https://images.velog.io/images/codns1223/post/f539b561-c326-4e05-966e-f5968d970c82/swiper2.gif"
+         src="https://user-images.githubusercontent.com/83581867/159510056-6b87822c-e41c-4503-912a-b0338497080a.gif"
          alt=""
        />
   </div>
