@@ -87,6 +87,34 @@ challenge
   </tr>
 </table>
   
+<h3>3차 미션 스크린샷<h3> 
+  
+Basic
+   
+1. 모달 바깥 영역 클릭시 close   
+  
+  <div align="center">
+        <img
+         src="https://user-images.githubusercontent.com/83581867/159506113-59f8769a-e96d-48b3-975e-e67f9dc15827.gif"
+         width="500px;"
+         alt=""
+       />
+  </div>
+  
+challenge
+   
+1. Swiper Slide  
+  
+  <div align="center">
+        <img
+         src="https://user-images.githubusercontent.com/83581867/159506113-59f8769a-e96d-48b3-975e-e67f9dc15827.gif"
+         width="500px;"
+         alt=""
+       />
+  </div>
+  
+  
+  
   
   
 
