@@ -45,7 +45,6 @@ function Row({ isLargeRow, title, id, fetchUrl }) {
                 <Swiper
                     spaceBetween={20}
                     slidesPerView={6}
-                    navigation
                     scrollbar={{ draggable: true }}
                 >
                     <div id={id} className="row__posters">
