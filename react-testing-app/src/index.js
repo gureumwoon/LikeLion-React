@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { OrderContextProvider } from './contexts/OrderContext';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <OrderContextProvider>
     <App />
-  </React.StrictMode>,
+  </OrderContextProvider>,
   document.getElementById('root')
 );
 
