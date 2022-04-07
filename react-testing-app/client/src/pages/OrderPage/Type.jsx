@@ -3,7 +3,7 @@ import axios from "axios";
 import Products from "./Products";
 import Options from "./Options";
 import { OrderContext } from "../../contexts/OrderContext";
-// import ErrorBanner from "../../components/ErrorBanner";
+import ErrorBanner from "../../components/ErrorBanner";
 
 function Type({ orderType }) {
     const [items, setItems] = useState([]);
@@ -37,9 +37,9 @@ function Type({ orderType }) {
         />
     ));
 
-    // if (error) {
-    //     return <ErrorBanner message="에러가 발생했습니다." />;
-    // }
+    if (error) {
+        return <ErrorBanner message="에러가 발생했습니다." />;
+    }
 
     // let orderTypeKorean = orderType === "products" ? "상품" : "옵션";
     return (
