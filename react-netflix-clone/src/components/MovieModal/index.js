@@ -13,12 +13,13 @@ function MovieModal({
     setModalOpen,
 }) {
 
-    const outSection = useRef();
+    const ref = useRef();
+    useCloseModal(ref, () => { setModalOpen(false) })
 
     return (
         <div className="presentation">
             <div className="wrapper-modal">
-                <div className="modal" ref={outSection} onClick={useCloseModal(outSection, setModalOpen)}>
+                <div className="modal" ref={ref}>
                     <span onClick={() => setModalOpen(false)} className="modal-close">
                         X
                     </span>

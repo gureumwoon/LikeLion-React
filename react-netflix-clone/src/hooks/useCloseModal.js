@@ -1,16 +1,19 @@
 import { useEffect } from 'react'
 
-export const useCloseModal = (ref, setModalOpen) => {
+export const useCloseModal = (ref, handler) => {
 
     useEffect(() => {
-        const handleClose = (e) => {
-            if (ref.current && !ref.current.contains(e.target)) {
-                setModalOpen(false);
+        const listener = (event) => {
+            if (!ref.current || ref.current.contains(event.target)) {
+                return;
             }
-        }
-        window.addEventListener('click', handleClose)
+            handler();
+        };
+        document.addEventListener("mousedown", listener)
+        document.addEventListener("touchstart", listener)
         return () => {
-            window.removeEventListener('click', handleClose)
+            document.removeEventListener("mousedown", listener)
+            document.removeEventListener("touchstart", listener);
         }
-    }, [ref, setModalOpen])
+    }, [ref, handler])
 }
