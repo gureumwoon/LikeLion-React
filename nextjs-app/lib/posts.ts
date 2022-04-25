@@ -32,3 +32,19 @@ export function getSortedPostsData() {
         }
     })
 }
+
+const json: string = '{"x":4,"y":7}'
+const coordinates = JSON.parse(json)
+console.log(coordinates)
+
+let greeting
+greeting = 'hello' // let greeting: any
+
+let num = [-7, -2, 10]
+let numAboveZero: boolean | number = false
+
+for (let i = 0; i < num.length; i++) {
+    if (num[i] > 0) {
+        numAboveZero = num[i]
+    }
+}
