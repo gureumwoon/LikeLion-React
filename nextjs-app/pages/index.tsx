@@ -1,8 +1,15 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
+import { getSortedPostsData } from '../lib/posts'
 import homeStyles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+const Home = ({ allPostsData }: {
+  allPostsData: {
+    date: String
+    title: String
+    id: String
+  }[]
+}) => {
   return (
     <div>
       <Head>
@@ -25,3 +32,12 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData
+    }
+  }
+}
