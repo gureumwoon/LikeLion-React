@@ -33,18 +33,22 @@ export function getSortedPostsData() {
     })
 }
 
-const json: string = '{"x":4,"y":7}'
-const coordinates = JSON.parse(json)
-console.log(coordinates)
+export function getAllPostIds() {
+    const fileNames = fs.readdirSync(postsDirectory);
+    return fileNames.map(fileName => {
+        return {
+            params: {
+                id: fileName.replace(/\.md$/, '')
+            }
+        }
+    })
+}
 
-let greeting
-greeting = 'hello' // let greeting: any
+export function getPostData(id: string) {
+    const fullPath = path.join(postsDirectory, `${id}.md`)
+    const fileContents = fs.readFileSync(fullPath, 'utf-8')
 
-let num = [-7, -2, 10]
-let numAboveZero: boolean | number = false
+    const matterResult = matter(fileContents);
 
-for (let i = 0; i < num.length; i++) {
-    if (num[i] > 0) {
-        numAboveZero = num[i]
-    }
+    const ProcessedContent = await remark();
 }
